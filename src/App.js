@@ -5,6 +5,7 @@ import * as ROUTES from './constants/routes';
 const Login = lazy(() => import('./pages/Login'));
 const SignUp = lazy(() => import('./pages/Signup'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const Dashboard = lazy(() => import('./pages/Dashboard'));
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Switch>
           <Route path={ROUTES.LOGIN} component={Login} exact />
           <Route path={ROUTES.SIGN_UP} component={SignUp} exact />
+          <Route path={ROUTES.DASHBOARD} component={Dashboard} exact />
           <Route component={NotFound} />
         </Switch>
       </Suspense>
